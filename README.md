@@ -58,25 +58,25 @@ This will run the application inside a Docker container. You can access it at ht
 # Project Structure
 
 frontend-news-app/
-  ├── public/               # Static assets
-  │   ├── index.html        # HTML template
-  │   └── ...
-  ├── src/                  # Source code
-  │   ├── components/       # React components
-  │   │   ├── Header/       # Header component
-  │   │   ├── Footer/       # Footer component
-  │   │   ├── ArticleList/  # ArticleList component
-  │   │   ├── Filter/       # Filter component
-  │   │   ├── SearchBar/    # SearchBar component
-  │   │   └── ...           # Other components
-  │   ├── hooks/            # Custom hooks
-  │   ├── styles/           # SCSS files
-  │   ├── App.js            # Main application component
-  │   └── index.js          # Entry point
-  ├── .gitignore            # Git ignore file
-  ├── Dockerfile            # Docker configuration
-  ├── package.json          # Project dependencies
-  └── README.md             # Project documentation
+  public/ # Static assets
+  index.html # HTML template
+
+    src/ # Source code
+      components/ # React components
+        Header/ # Header component
+        Footer/ # Footer component
+        ArticleList/ # ArticleList component
+        Filter/ # Filter component
+        SearchBar/ # SearchBar component
+        ...        # Other components
+    hooks/ # Custom hooks
+    styles/ # SCSS files
+    App.js  # Main application component
+        index.js # Entry point
+    .gitignore # Git ignore file
+    Dockerfile # Docker configuration
+    package.json # Project dependencies
+    README.md # Project documentation
 
 
 # Features
