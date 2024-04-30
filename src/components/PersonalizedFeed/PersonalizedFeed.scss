@@ -1,0 +1,92 @@
+@import '../../styles/variables.scss';
+
+.personalized-feed-wrapper {
+  text-align: right;
+  margin-top: $margin-medium;
+
+  .personalized-feed-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: $margin-medium;
+    @include mobile {
+      align-items: end;
+      justify-content: flex-end;
+      margin-top: $margin-medium;
+      row-gap: 10px;
+      flex-direction: column;
+    }
+
+    .select-wrapper {
+      position: relative;
+      margin-right: $margin-medium;
+
+      & select {
+        width: 100%;
+        padding: 8px 30px 8px 10px;
+        border: 1px solid $primary-color;
+        border-radius: 4px;
+        color: $secondary-color;
+        font-size: $base-font-size;
+        font-family: $font-family;
+        line-height: $line-height-sm;
+        appearance: none;
+
+        &:disabled {
+          border-color: $secondary-color;
+          &:focus {
+            border-color: $secondary-color;
+            color: $secondary-color;
+          }
+          &:hover {
+            border-color: $secondary-color;
+            color: $secondary-color;
+          }
+          &::after {
+            color: $secondary-color;
+          }
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+        }
+        &:hover {
+          outline: none;
+          border-color: $primary-color;
+          cursor: pointer;
+          color: $primary-color;
+        }
+      }
+
+      &::after {
+        content: '\25BC';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: $secondary-color;
+      }
+      &:hover::after {
+        color: $primary-color;
+      }
+    }
+  }
+  .toggle-button,
+  .personalize-button {
+    background-color: $primary-color;
+    color: $light-color;
+    border: none;
+    padding: $padding-medium - 1 $padding-large;
+    border-radius: 4px;
+    font-size: $base-font-size;
+    font-family: $font-family;
+    width: 134px;
+    cursor: pointer;
+  }
+
+  .toggle-button {
+    margin-left: $margin-medium;
+  }
+}

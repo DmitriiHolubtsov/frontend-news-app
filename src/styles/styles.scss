@@ -1,0 +1,27 @@
+// Main imports
+@import './general.scss';
+@import './variables.scss';
+
+// App
+@import './App.scss';
+
+// Articles List
+@import '../components/ArticleList/ArticleList.scss';
+
+// Filters
+@import '../components/Filter/Filter.scss';
+
+// Footer
+@import '../components/Footer/Footer.scss';
+
+// Header
+@import '../components/Header/Header.scss';
+
+// Pagination
+@import '../components/Pagination/Pagination.scss';
+
+// Personalized Feed
+@import '../components/PersonalizedFeed/PersonalizedFeed.scss';
+
+// Search Bar
+@import '../components/SearchBar/SearchBar.scss';

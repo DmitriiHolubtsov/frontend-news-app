@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: $margin-large * 2;
+  margin-left: 0;
+  padding-left: 0;
+
+  @include mobile {
+    margin-top: $margin-large;
+    margin-bottom: $margin-large;
+  }
+}
+
+.page-item {
+  list-style: none;
+  margin: 0 $margin-small;
+}
+
+.page-link {
+  background-color: $primary-color;
+  color: $light-color;
+  padding: $padding-medium $padding-medium;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-family: $font-family;
+  line-height: $line-height-xs;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $info-color;
+    cursor: pointer;
+  }
+}

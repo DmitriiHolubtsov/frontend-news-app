@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+.controls {
+  padding: $padding-large;
+
+  @include mobile {
+    padding: $padding-sm;
+  }
+}

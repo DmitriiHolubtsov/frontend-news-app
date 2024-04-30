@@ -1,0 +1,123 @@
+@import '../../styles/variables.scss';
+
+.container {
+  margin-bottom: 100px;
+  @include mobile {
+    margin-bottom: 70px;
+  }
+}
+
+.parent-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 $padding-md;
+  @include mobile {
+    padding: 0 $padding-sm;
+    gap: 15px;
+  }
+}
+
+.child-link {
+  display: block;
+  text-decoration: none;
+  color: $light-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.news-card {
+  width: 100%;
+  height: 100%;
+  background-color: $light-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  transition: background-color $default-animation;
+ 
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $semi-light-color;
+    transition: box-shadow 0.3s ease;
+    transition: background-color $default-animation;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .no-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $secondary-color;
+    font-size: $font-lg;
+    font-family: $font-family;
+    line-height: $line-height-lg;
+  }
+
+  .content {
+    padding: $padding-md;
+
+    @include mobile {
+      padding: $padding-sm;
+    }
+
+    h3 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      max-height: 3em;
+      text-overflow: ellipsis;
+      color: $primary-color;
+      font-size: $font-lg;
+      font-family: $font-family;
+      line-height: $line-height-sm;
+    }
+
+    .description {
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: $secondary-color;
+      font-size: $font-md;
+      font-family: $font-family;
+      line-height: $line-height-sm;
+    }
+    .category {
+      color: $secondary-color;
+      font-size: $font-md;
+      font-family: $font-family;
+      line-height: $line-height-sm;
+    }
+    .date {
+      color: $secondary-color;
+      font-size: $font-xs;
+      font-family: $font-family;
+      line-height: $line-height-xs;
+    }
+    .link {
+      color: $dark-color;
+      font-size: $font-md;
+      font-family: $font-family;
+      line-height: $line-height-sm;
+    }
+  }
+}
