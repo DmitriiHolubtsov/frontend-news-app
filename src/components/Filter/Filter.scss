@@ -7,25 +7,15 @@
     display: flex;
     align-items: center; 
     justify-content: flex-end;
-    margin-top: $margin-medium;
-    @include mobile {
-      align-items: end;
-      justify-content: flex-end;
-      margin-top: $margin-medium;
-      row-gap: 10px;
-      flex-direction: column;
-    }
+    margin-bottom: $margin-medium;
+    column-gap: 10px;
+    flex-wrap: nowrap;
   
     .select-wrapper {
       position: relative;
-      margin-right: $margin-medium;
-      @include mobile {
-        margin-right: 0;
-      }
-     
       & select {
-        width: 100%;
-        padding: 8px 30px 8px 10px;
+        width: 100%; 
+        padding: 8px 22px 8px 10px;
         border: 1px solid $primary-color;
         border-radius: 4px;
         color: $secondary-color;
@@ -33,6 +23,12 @@
         font-family: $font-family;
         line-height: $line-height-sm;
         appearance: none;
+
+        @include mobile {
+          font-size: $font-xs;
+          width: fit;
+          padding-right: 12px;
+        }
     
         &:focus {
           outline: none;
@@ -44,9 +40,6 @@
           cursor: pointer;
           color: $primary-color;
         }
-    
-       
-      
       }
     
       &::after {
@@ -57,6 +50,11 @@
         transform: translateY(-50%);
         pointer-events: none;
         color: $secondary-color;
+        font-size: 12px;
+        @include mobile {
+          right: 5px;
+          font-size: 10px;
+        }
       }
       &:hover::after {
         color: $primary-color;
@@ -64,7 +62,6 @@
     }
   }
   
-  .toggle-button,
   .filter-button {
     background-color: $primary-color;
     color: $light-color;
@@ -74,13 +71,6 @@
     font-size: $base-font-size;
     font-family: $font-family;
     cursor: pointer;
-  }
-  
-  .toggle-button {
-    position: relative;
-    margin-right: 0;
-    width: 134px;
-    margin-left: 0;
   }
 }
 

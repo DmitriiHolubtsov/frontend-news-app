@@ -27,21 +27,21 @@ npm install
 
 # Usage
 
-# Development
+## Development
 To start the development server, run:
 
 npm start
 
 This command will start the application in development mode. Open http://localhost:3000 to view it in the browser.
 
-# Production Build
+## Production Build
 To build the application for production, run:
 
 npm run build
 
 This command will create an optimized production build of the application in the build directory.
 
-# Docker
+## Docker
 Alternatively, you can use Docker to build and run the application in a container.
 
 1. Build the Docker image:
@@ -60,7 +60,6 @@ This will run the application inside a Docker container. You can access it at ht
 frontend-news-app/
   public/ # Static assets
   index.html # HTML template
-
     src/ # Source code
       components/ # React components
         Header/ # Header component
@@ -93,7 +92,6 @@ Node-sass: Sass compiler for converting SCSS to CSS.
 
 # License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
 
 
 Feel free to adjust the content and structure according to your project's specifics!

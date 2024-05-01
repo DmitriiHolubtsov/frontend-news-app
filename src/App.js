@@ -8,10 +8,13 @@ import PersonalizedFeed from './components/PersonalizedFeed/PersonalizedFeed';
 import useFetchNewsAPI from './hooks/NewsAPI';
 import useFetchGuardianAPI from './hooks/NewsGuardianAPI';
 import useFetchNewsDataAPI from './hooks/NewsDataAPI';
+import PopupWindow from './components/Popup/Popup';
 import './styles/App.scss';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [showFilters, setShowFilters] = useState(false);
+  const [showPersonalize, setShowPersonalize] = useState(false);
   const [filterOptions, setFilterOptions] = useState({});
   const [personalizationOptions, setPersonalizationOptions] = useState({});
 
@@ -54,10 +57,12 @@ const App = () => {
 
   const handleFilter = (options) => {
     setFilterOptions(options);
+    setShowFilters(false); // Close filters popup when filter is applied
   };
 
   const handlePersonalize = (options) => {
     setPersonalizationOptions(options);
+    setShowPersonalize(false); // Close personalize popup when filter is applied
   };
 
   // Combine articles from different sources into one array
@@ -80,14 +85,28 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+      <Header
+        onFilterClick={() => setShowFilters(true)}
+        onPersonalizeClick={() => setShowPersonalize(true)}
+      />
       <div className='controls'>
-        <Filter onFilter={handleFilter} />
-        <PersonalizedFeed onPersonalize={handlePersonalize} />
         <SearchBar onSearch={handleSearch} />
       </div>
       <ArticleList articles={combinedArticles} />
       <Footer />
+      {showFilters && (
+        <PopupWindow title='Filters' onClose={() => setShowFilters(false)}>
+          <Filter onFilter={handleFilter} />
+        </PopupWindow>
+      )}
+      {showPersonalize && (
+        <PopupWindow
+          title='Personalize Feed'
+          onClose={() => setShowPersonalize(false)}
+        >
+          <PersonalizedFeed onPersonalize={handlePersonalize} />
+        </PopupWindow>
+      )}
     </div>
   );
 };

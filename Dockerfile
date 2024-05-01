@@ -18,8 +18,8 @@ COPY ./src/components/ArticleList/ArticleList.scss ./src/components/ArticleList/
 COPY ./src/components/Filter/Filter.scss ./src/components/Filter/Filter.scss
 COPY ./src/components/Footer/Footer.scss ./src/components/Footer/Footer.scss
 COPY ./src/components/Header/Header.scss ./src/components/Header/Header.scss
+COPY ./src/components/Popup/Popup.scss ./src/components/Popup/Popup.scss
 COPY ./src/components/Pagination/Pagination.scss ./src/components/Pagination/Pagination.scss
-COPY ./src/components/PersonalizedFeed/PersonalizedFeed.scss ./src/components/PersonalizedFeed/PersonalizedFeed.scss
 COPY ./src/components/SearchBar/SearchBar.scss ./src/components/SearchBar/SearchBar.scss
 
 # Compile SCSS to CSS

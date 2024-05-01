@@ -17,7 +17,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "eject": "react-scripts eject",
     "compile-scss": "node-sass src/styles/styles.scss public/css/main.css",
-    "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\""
+    "format": "prettier --write \"src/**/*.js\""
   },
   "eslintConfig": {
     "extends": [

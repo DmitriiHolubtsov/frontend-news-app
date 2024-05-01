@@ -9,36 +9,36 @@
   @include mobile {
     margin-top: 0;
     padding-top: $padding-medium;
-    padding-bottom: $padding-medium;;
+    padding-bottom: $padding-medium;
   }
-}
 
-.search-input {
-  padding: $padding-large;
-  border: 1px solid $primary-color;
-  border-radius: 4px;
-  color: $secondary-color;
-  font-size: $base-font-size;
-  font-family: $font-family;
-  line-height: $line-height-sm;
-  margin-right: $margin-medium;
-  width: 100%;
-  max-width: 500px;
-  &::placeholder {
+  .search-input {
+    padding: $padding-large;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
     color: $secondary-color;
     font-size: $base-font-size;
     font-family: $font-family;
     line-height: $line-height-sm;
+    margin-right: $margin-medium;
+    width: 100%;
+    max-width: 500px;
+    &::placeholder {
+      color: $secondary-color;
+      font-size: $base-font-size;
+      font-family: $font-family;
+      line-height: $line-height-sm;
+    }
   }
-}
 
-.search-button {
-  background-color: $primary-color;
-  color: $light-color;
-  border: none;
-  padding: $padding-large $padding-large;
-  border-radius: 4px;
-  font-size: $base-font-size;
-  font-family: $font-family;
-  cursor: pointer;
+  .search-button {
+    background-color: $primary-color;
+    color: $light-color;
+    border: none;
+    padding: $padding-large $padding-large;
+    border-radius: 4px;
+    font-size: $base-font-size;
+    font-family: $font-family;
+    cursor: pointer;
+  }
 }
